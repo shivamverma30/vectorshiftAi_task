@@ -1,0 +1,128 @@
+/* index.css
+   VectorShift-inspired pipeline builder — dark, refined, professional.
+   Inter for UI text, JetBrains Mono for code/labels.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --bg-base:        #0e1117;
+  --bg-surface:     #161b26;
+  --bg-elevated:    #1c2333;
+  --bg-hover:       #212840;
+  --border:         #2a3349;
+  --border-light:   #1e2840;
+  --text-primary:   #e8edf5;
+  --text-secondary: #8b95a8;
+  --text-muted:     #4a5568;
+  --accent:         #5b6cf9;
+  --accent-hover:   #6b7cff;
+  --accent-glow:    rgba(91,108,249,0.15);
+  --green:          #22c55e;
+  --red:            #f43f5e;
+  --purple:         #a855f7;
+  --amber:          #f59e0b;
+  --cyan:           #06b6d4;
+  --pink:           #ec4899;
+  --blue:           #3b82f6;
+  --orange:         #f97316;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-base);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbars ── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--bg-hover); }
+
+/* ── ReactFlow canvas overrides ── */
+.react-flow__renderer { background: var(--bg-base) !important; }
+
+.react-flow__edge-path {
+  stroke: #2d3d5e !important;
+  stroke-width: 1.5 !important;
+}
+.react-flow__edge.selected .react-flow__edge-path,
+.react-flow__edge:hover .react-flow__edge-path {
+  stroke: var(--accent) !important;
+  stroke-width: 2 !important;
+}
+
+.react-flow__connection-path {
+  stroke: var(--accent) !important;
+  stroke-width: 2 !important;
+  stroke-dasharray: 6 3;
+}
+
+/* Controls */
+.react-flow__controls {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3) !important;
+}
+.react-flow__controls-button {
+  background: var(--bg-surface) !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  color: var(--text-secondary) !important;
+  width: 28px !important;
+  height: 28px !important;
+  transition: background 0.15s, color 0.15s;
+}
+.react-flow__controls-button:last-child { border-bottom: none !important; }
+.react-flow__controls-button:hover {
+  background: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+}
+.react-flow__controls-button svg { fill: currentColor !important; }
+
+/* MiniMap */
+.react-flow__minimap {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+/* Node selection ring */
+.react-flow__node.selected > div,
+.react-flow__node.selected > div > div {
+  box-shadow: 0 0 0 2px var(--accent), 0 8px 32px rgba(91,108,249,0.2) !important;
+}
+
+/* Background dots */
+.react-flow__background pattern circle {
+  fill: #1e2840 !important;
+}
+
+/* Handle dots styling */
+.react-flow__handle {
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.react-flow__handle:hover {
+  transform: scale(1.4);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
