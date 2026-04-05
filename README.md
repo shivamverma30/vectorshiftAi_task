@@ -2,7 +2,7 @@
 
 A visual pipeline builder application inspired by VectorShift, allowing users to create and validate data processing pipelines through an intuitive drag-and-drop interface.
 
-![Pipeline Builder](https://img.shields.io/badge/React-18.2-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-Latest-green) ![ReactFlow](https://img.shields.io/badge/ReactFlow-11.8-purple) ![Watch Demo](https://drive.google.com/file/d/1oTEpBWERu-s44_IPi651a6UzpJuCFl1s/view?usp=sharing)
+![Pipeline Builder](https://img.shields.io/badge/React-18.2-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-Latest-green) ![ReactFlow](https://img.shields.io/badge/ReactFlow-11.8-purple) [![Demo](https://img.shields.io/badge/Demo-Watch%20Video-red?logo=google-drive)](https://drive.google.com/file/d/1oTEpBWERu-s44_IPi651a6UzpJuCFl1s/view)
 
 ## 🚀 Features
 
